@@ -1,13 +1,13 @@
-import { reportPageData } from './reportPageData';
 
-function LayoutEngine() {
+
+function LayoutEngine({config, components}) {
+  const Component = components[config.type];
+
   return (
     <div className="LayoutEngine">
       <header className="LayoutEngine-header">
-        <h1>
-          Report Page
-        </h1>
-        <pre>{JSON.stringify(reportPageData, null, 2) }</pre>
+        <Component/>
+        <pre>{JSON.stringify(config, null, 2) }</pre>
       </header>
     </div>
   );
