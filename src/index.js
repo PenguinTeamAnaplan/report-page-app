@@ -1,18 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LayoutEngine from './LayoutEngine';
-import { ReportPageData } from './ReportPageData';
-import TEXT from './cards/Text';
-import REPORT from './cards/Report';
-import SLIDE from './cards/Slide';
-import CHART from './cards/Chart';
+import Layout from './Layout';
+import { ReportPageData } from './reportPageData';
 
-const cards = { TEXT, REPORT, SLIDE, CHART};
+import cards from './cards';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LayoutEngine config={ReportPageData} components={cards}/>
+    <Layout config={ReportPageData} components={cards} />
   </React.StrictMode>,
   document.getElementById('root')
 );
-

@@ -1,13 +1,3 @@
-function LayoutEngine() {
-  return (
-    <div className="LayoutEngine">
-      <header className="LayoutEngine-header">
-        <h1>
-          Report Page
-        </h1>
-      </header>
-    </div>
-  );
-}
+const textCard = () => <h1>Text</h1>;
 
-export default LayoutEngine;
+export default textCard;
