@@ -1,4 +1,25 @@
-var data = { a: 1, b: 2 };
+var reportPageData = { 
+	id: "guid",
+	type: "REPORT",
+	version: 1,
+	children: [{
+		id: "guid",
+		type: "SLIDE",
+		size: "A4",
+		orientation: "portrait",
+		children: [{
+			type: "TEXT",
+			widgetId: 1,
+			left: 0,
+        top: 0,
+        width: 0,
+        height: 0
+		}, {
+			type: "CHART",
+			widgetId: 2
+		}]
+	}]
+};
 
 function LayoutEngine() {
   return (
@@ -7,7 +28,7 @@ function LayoutEngine() {
         <h1>
           Report Page
         </h1>
-        <pre>{JSON.stringify(data, null, 2) }</pre>
+        <pre>{JSON.stringify(reportPageData, null, 2) }</pre>
       </header>
     </div>
   );
