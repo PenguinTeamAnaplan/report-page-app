@@ -20,16 +20,16 @@ export default Layout;
 
 function LayoutComponent({ config, components, renderChildren }) {
   const defaultComponentConfig = components[config.type];
-  // const componentConfig = { ...defaultComponentConfig, ...config };
   const Component = defaultComponentConfig.component;
 
   return (
-    <LayoutBox config={defaultComponentConfig}>
+    <LayoutBox config={config}>
       <Component config={config} renderChildren={renderChildren} />
     </LayoutBox>
   );
 }
 
-function LayoutBox({ children }) {
-  return <div>{children}</div>;
+function LayoutBox({ children, config }) {
+  console.log("config", config);
+  return <div style={config.styles} >{children}</div>;
 }

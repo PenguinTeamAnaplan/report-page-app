@@ -12,14 +12,26 @@ export const ReportPageData = {
         {
           type: 'TEXT',
           widgetId: 1,
-          left: 0,
-          top: 0,
-          width: 0,
-          height: 0,
+          styles: {
+            left: 20,
+            top: 20,
+            width: 100,
+            height: 200,
+            position: "absolute",
+            border: "1px solid tomato"
+          }
         },
         {
           type: 'CHART',
           widgetId: 2,
+          styles: {
+            left: 140,
+            top: 20,
+            width: 100,
+            height: 200,
+            position: "absolute",
+            border: "1px solid tomato"
+          }
         },
       ],
     },
@@ -32,10 +44,14 @@ export const ReportPageData = {
         {
           type: 'TEXT',
           widgetId: 1,
-          left: 0,
-          top: 0,
-          width: 0,
-          height: 0,
+          styles: {
+            left: 20,
+            top: 100,
+            width: 100,
+            height: 200,
+            position: "absolute",
+            border: "1px solid tomato"
+          }
         },
       ],
     },
