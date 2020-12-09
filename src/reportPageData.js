@@ -17,9 +17,9 @@ export const ReportPageData = {
             top: 20,
             width: 100,
             height: 200,
-            position: "absolute",
-            border: "1px solid tomato"
-          }
+            position: 'absolute',
+            border: '1px solid tomato',
+          },
         },
         {
           type: 'CHART',
@@ -29,9 +29,9 @@ export const ReportPageData = {
             top: 20,
             width: 100,
             height: 200,
-            position: "absolute",
-            border: "1px solid tomato"
-          }
+            position: 'absolute',
+            border: '1px solid tomato',
+          },
         },
       ],
     },
@@ -49,9 +49,9 @@ export const ReportPageData = {
             top: 100,
             width: 100,
             height: 200,
-            position: "absolute",
-            border: "1px solid tomato"
-          }
+            position: 'absolute',
+            border: '1px solid tomato',
+          },
         },
       ],
     },
