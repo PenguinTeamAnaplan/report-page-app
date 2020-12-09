@@ -5,7 +5,7 @@ const slideCard = ({ renderChildren }) => (
       className="slides__slide"
       style={{ border: '1px solid purple', position: 'relative' }}
     >
-      {renderChildren()}
+      {renderChildren('main')}
     </div>
   </div>
 );

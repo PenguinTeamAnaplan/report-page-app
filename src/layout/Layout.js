@@ -3,10 +3,10 @@ function Layout({ config, components }) {
 }
 
 function LayoutComponent({ config, components }) {
-  const renderChildren = () => {
-    if (!config.children) return null;
+  const renderChildren = (area) => {
+    if (!config.areas || !config.areas[area]) return null;
 
-    return config.children.map((child, i) => (
+    return config.areas[area].map((child, i) => (
       <LayoutComponent config={child} components={components} key={i} />
     ));
   };
