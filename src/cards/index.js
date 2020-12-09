@@ -3,11 +3,13 @@ import CHART from './Chart';
 import SLIDE from './Slide';
 import TEXT from './Text';
 
+import { LayoutBox } from '../layout';
+
 const cards = {
   REPORT: { component: REPORT },
-  CHART: { component: CHART },
+  CHART: { component: LayoutBox(CHART) },
   SLIDE: { component: SLIDE },
-  TEXT: { component: TEXT, draggable: true },
+  TEXT: { component: LayoutBox(TEXT) },
 };
 
 export default cards;
