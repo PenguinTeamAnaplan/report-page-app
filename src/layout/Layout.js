@@ -16,11 +16,11 @@ function Layout({ config, components }) {
   );
 }
 
-export default Layout;
-
 function LayoutComponent({ config, components, renderChildren }) {
   const defaultComponentConfig = components[config.type];
   const Component = defaultComponentConfig.component;
 
   return <Component config={config} renderChildren={renderChildren} />;
 }
+
+export default Layout;
