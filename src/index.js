@@ -1,47 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { Provider, useSelector } from 'react-redux';
+import store from './redux/store';
+import { selectLayout } from './redux/layoutSlice';
+
 import { Layout } from './layout';
-import data from './reportPageData';
-
-// import dotProp from 'dot-prop-immutable';
-import jsonpath from 'jsonpath';
-
-// import data from './worksheetData';
 
 import cards from './cards';
 
 const Page = () => {
-  const [config, setConfig] = useState(data);
+  const config = useSelector(selectLayout);
 
-  const updateConfig = (propName, newValue) => {
-    jsonpath.apply(config, `$..${propName}`, () => {
-      return newValue;
-    });
-
-    setConfig({ ...config });
-  };
-
-  const updateProps = (id, propName, newValue) => {
-    jsonpath.apply(config, `$..[?(@.id=="${id}")].${propName}`, () => {
-      return newValue;
-    });
-
-    setConfig({ ...config });
-  };
-
-  return (
-    <Layout
-      config={config}
-      components={cards}
-      updateProps={updateProps}
-      updateConfig={updateConfig}
-    />
-  );
+  return <Layout config={config} components={cards} />;
 };
 
 ReactDOM.render(
   <React.StrictMode>
-    <Page />
+    <Provider store={store}>
+      <Page />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

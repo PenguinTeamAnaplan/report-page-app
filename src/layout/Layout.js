@@ -1,10 +1,18 @@
-function Layout({ config, components, updateProps, updateConfig }) {
+import { useDispatch } from 'react-redux';
+import { actionUpdateProps } from '../redux/layoutSlice';
+
+function Layout({ config, components }) {
+  const dispatch = useDispatch();
+
+  const updateProps = (prop) => {
+    dispatch(actionUpdateProps(prop));
+  };
+
   return (
     <LayoutComponent
       config={config}
       components={components}
       updateProps={updateProps}
-      updateConfig={updateConfig}
     />
   );
 }

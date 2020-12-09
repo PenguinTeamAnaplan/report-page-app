@@ -7,7 +7,11 @@ const LayoutBox = (Component) => (props) => {
       <Component {...props} />
       <button
         onClick={() =>
-          updateProps(config.id, 'styles.top', config.styles.top + 10)
+          updateProps({
+            id: config.id,
+            prop: 'styles.top',
+            value: config.styles.top + 10,
+          })
         }
       >
         Right
