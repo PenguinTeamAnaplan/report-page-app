@@ -1,3 +1,10 @@
-const textCard = () => <h1>Text</h1>;
+const textCard = ({ path }) => {
+    
+    return (
+        <div>
+            <h1>Text: {path}</h1>
+        </div>
+    );
+}
 
 export default textCard;

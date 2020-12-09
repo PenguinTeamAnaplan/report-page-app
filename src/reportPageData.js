@@ -1,11 +1,11 @@
 const reportPageData = {
-  id: 'guid',
+  id: 'report-1',
   type: 'REPORT',
   version: 1,
   areas: {
     main: [
       {
-        id: 'guid',
+        id: 'slide-1',
         type: 'SLIDE',
         size: 'A4',
         orientation: 'portrait',
@@ -13,7 +13,7 @@ const reportPageData = {
           main: [
             {
               type: 'TEXT',
-              widgetId: 1,
+              id: 'text-1',
               styles: {
                 left: 20,
                 top: 20,
@@ -23,7 +23,7 @@ const reportPageData = {
             },
             {
               type: 'CHART',
-              widgetId: 2,
+              id: 'chart-1',
               styles: {
                 left: 140,
                 top: 20,
@@ -35,7 +35,7 @@ const reportPageData = {
         },
       },
       {
-        id: 'guid1',
+        id: 'slide-2',
         type: 'SLIDE',
         size: 'A4',
         orientation: 'portrait',
@@ -43,7 +43,7 @@ const reportPageData = {
           main: [
             {
               type: 'TEXT',
-              widgetId: 1,
+              id: 'text-2',
               styles: {
                 left: 20,
                 top: 100,
@@ -59,3 +59,5 @@ const reportPageData = {
 };
 
 export default reportPageData;
+
+// areas.main[1].areas.main[0]
