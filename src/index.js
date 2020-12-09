@@ -9,5 +9,5 @@ ReactDOM.render(
   <React.StrictMode>
     <Layout config={reportPageData} components={cards} />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
