@@ -7,7 +7,7 @@ import { LayoutBox } from '../layout';
 
 const cards = {
   REPORT: { component: REPORT },
-  CHART: { component: LayoutBox(CHART) },
+  CHART: { component: LayoutBox(CHART), props: { minWidth: 600 } },
   SLIDE: { component: SLIDE },
   TEXT: { component: LayoutBox(TEXT) },
 };

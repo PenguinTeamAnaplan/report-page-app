@@ -19,8 +19,9 @@ function Layout({ config, components }) {
 function LayoutComponent({ config, components, renderChildren }) {
   const defaultComponentConfig = components[config.type];
   const Component = defaultComponentConfig.component;
+  const props = { config, renderChildren, ...defaultComponentConfig.props };
 
-  return <Component config={config} renderChildren={renderChildren} />;
+  return <Component {...props} />;
 }
 
 export default Layout;

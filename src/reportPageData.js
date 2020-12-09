@@ -1,4 +1,4 @@
-export const ReportPageData = {
+const reportPageData = {
   id: 'guid',
   type: 'REPORT',
   version: 1,
@@ -57,3 +57,5 @@ export const ReportPageData = {
     },
   ],
 };
+
+export default reportPageData;
